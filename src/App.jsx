@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
@@ -8,9 +8,7 @@ import { useToastStore } from './components/Toast/store/useToastStore'
 
 function App () {
   const addItemCatalogo = useToastStore(state => state.addItemCatalogo)
-  const toastCatalogo = useToastStore(state => state.toastCatalogo)
 
-  console.log(toastCatalogo)
   useEffect(() => {
     addItemCatalogo('prueba2')
   }, [addItemCatalogo])

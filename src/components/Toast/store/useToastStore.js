@@ -29,7 +29,6 @@ export const useToastStore = create((set, get) => {
       addStyle(1)
     },
     addStyle: async (timeToWait = 500) => {
-      console.log('addStyle')
       const { toastCatalogo } = get()
       setTimeout(() => {
         const catalogo = toastCatalogo.map((item, index) => {
