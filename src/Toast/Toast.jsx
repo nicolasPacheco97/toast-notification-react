@@ -15,4 +15,4 @@ const Toast = ({ componentsId }) => {
   )
 }
 
-export default Toast
+export { Toast }

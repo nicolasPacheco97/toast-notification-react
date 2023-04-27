@@ -2,16 +2,14 @@ import { useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
-import Toast from './components/Toast/Toast'
 import { toastId } from './constants/constants'
-import { useToastStore } from './components/Toast/store/useToastStore'
+import { useToast, Toast } from './index'
 
 function App () {
-  const addItemCatalogo = useToastStore(state => state.addItemCatalogo)
-
+  const { addToastItem } = useToast()
   useEffect(() => {
-    addItemCatalogo('prueba2')
-  }, [addItemCatalogo])
+    addToastItem('prueba2')
+  }, [addToastItem])
 
   return (
     <>
@@ -25,7 +23,7 @@ function App () {
       </div>
       <h1>Vite + React</h1>
       <div className='card'>
-        <button onClick={() => addItemCatalogo('prueba1')}>
+        <button onClick={() => addToastItem('prueba1')}>
           count is
         </button>
         <p>

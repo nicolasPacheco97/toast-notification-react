@@ -1,4 +1,4 @@
-import img from '../../../assets/vite.svg'
+import img from './vite.svg'
 import { useToastStore } from '../store/useToastStore'
 
 const Prueba1 = () => {

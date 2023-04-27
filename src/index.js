@@ -1,2 +1,3 @@
-export { Toast } from './components/Toast/Toast'
-export { addToastItem, removeToastItem } from './components/Toast/store/store'
+export { Toast } from './Toast/Toast'
+export { useToast } from './Toast/store/useToast'
+export { Prueba1, Prueba2 } from './Toast/Misc/Prueba'

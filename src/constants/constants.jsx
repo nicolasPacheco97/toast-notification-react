@@ -1,4 +1,4 @@
-import { Prueba1, Prueba2 } from '../components/Toast/Misc/Prueba'
+import { Prueba1, Prueba2 } from '../index'
 
 export const toastId = [
   {

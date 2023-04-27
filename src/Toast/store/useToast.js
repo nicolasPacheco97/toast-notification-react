@@ -1,6 +1,6 @@
 import { useToastStore } from './useToastStore'
 
-export const Store = () => {
+const useToast = () => {
   const addItemCatalogo = useToastStore(state => state.addItemCatalogo)
   const removeItemCatalogo = useToastStore(state => state.removeItemCatalogo)
 
@@ -9,3 +9,5 @@ export const Store = () => {
 
   return { addToastItem, removeToastItem }
 }
+
+export { useToast }
