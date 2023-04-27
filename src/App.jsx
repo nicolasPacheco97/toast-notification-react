@@ -1,10 +1,19 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
-import viteLogo from './vite.svg'
+import viteLogo from './assets/vite.svg'
 import './App.css'
+import Toast from './components/Toast/Toast'
+import { toastId } from './constants/constants'
+import { useToastStore } from './components/Toast/store/useToastStore'
 
 function App () {
-  const [count, setCount] = useState(0)
+  const addItemCatalogo = useToastStore(state => state.addItemCatalogo)
+  const toastCatalogo = useToastStore(state => state.toastCatalogo)
+
+  console.log(toastCatalogo)
+  useEffect(() => {
+    addItemCatalogo('prueba2')
+  }, [addItemCatalogo])
 
   return (
     <>
@@ -18,8 +27,8 @@ function App () {
       </div>
       <h1>Vite + React</h1>
       <div className='card'>
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+        <button onClick={() => addItemCatalogo('prueba1')}>
+          count is
         </button>
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
@@ -28,6 +37,8 @@ function App () {
       <p className='read-the-docs'>
         Click on the Vite and React logos to learn more
       </p>
+
+      <Toast componentsId={toastId} />
     </>
   )
 }
