@@ -1,0 +1,91 @@
+.prueba-toast{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    height: 5rem;
+    padding: 1rem;
+    width: 20rem;
+    background-color: #d3d3d3;
+    position: relative;
+    color: #5a5a5a;
+    border-radius: 10px;
+}
+.prueba-toast > span {
+    position: absolute;
+}
+.prueba-toast > span.close{
+    top: 1rem;
+    right: 1rem;
+}
+.prueba-toast > span.expand{
+    bottom: 1rem;
+    right: 1rem;
+}
+
+.toast{
+    position: fixed;
+    top: 5rem;
+    right: -25rem;
+    box-shadow: 0px 4px 4px #45424240;
+    border-radius: 10px;
+    z-index: 11;
+    -webkit-transition: 1s ease-in-out;
+    -moz-transition: 1s ease-in-out;
+    -o-transition: 1s ease-in-out;
+    transition: 1s ease-in-out;
+}
+
+.toast.toast-view-0{
+    -webkit-transform: translate(-26rem, 0);
+    -moz-transform: translate(-26rem, 0);
+    -o-transform: translate(-26rem, 0);
+    -ms-transform: translate(-26rem, 0);
+    transform: translate(-26rem, 0);
+    z-index: 5;
+}
+.toast.toast-view-1{
+    -webkit-transform: translate(-26rem, -0.4rem);
+    -moz-transform: translate(-26rem, -0.4rem);
+    -o-transform: translate(-26rem, -0.4rem);
+    -ms-transform: translate(-26rem, -0.4rem);
+    transform: translate(-26rem, -0.4rem);
+    opacity: 0.8;
+    z-index: 4;
+}
+.toast.toast-view-2{
+    -webkit-transform: translate(-26rem, -0.8rem);
+    -moz-transform: translate(-26rem, -0.8rem);
+    -o-transform: translate(-26rem, -0.8rem);
+    -ms-transform: translate(-26rem, -0.8rem);
+    transform: translate(-26rem, -0.8rem);
+    opacity: 0.5;
+    z-index: 3;
+}
+.toast.toast-view-3{
+    -webkit-transform: translate(-26rem, -1.2rem);
+    -moz-transform: translate(-26rem, -1.2rem);
+    -o-transform: translate(-26rem, -1.2rem);
+    -ms-transform: translate(-26rem, -1.2rem);
+    transform: translate(-26rem, -1.2rem);
+    opacity: 0.2;
+    z-index: 2;
+}
+.toast.toast_disabled{
+    -webkit-transform: translate(-26rem, -1.6rem);
+    -moz-transform: translate(-26rem, -1.6rem);
+    -o-transform: translate(-26rem, -1.6rem);
+    -ms-transform: translate(-26rem, -1.6rem);
+    transform: translate(-26rem, -1.6rem);
+    opacity: 0;
+    z-index: 1;
+}
+
+@media only screen and (max-width: 992px) {
+    .toast{
+        top: 9rem;
+    }
+}
+
+.pointer{
+    cursor: pointer;
+}
