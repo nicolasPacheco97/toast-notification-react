@@ -19,10 +19,12 @@
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
+  "dependencies": {
+    "zustand": "4.3.7"
+  },
   "peerDependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "zustand": "4.3.7"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@swc/cli": "0.1.62",
